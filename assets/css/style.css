@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+/* LAYOUT EN GRID*/
+.grid-container{
+    display: grid;
+    grid-template:
+    "header" auto
+    "main" 1fr
+    "footer" auto;
+}
+.menu-icon, #check{
+    display: none;
+}
+.header {
+    grid-area: header;
+    background-color: black;
+    width: 100%;
+} 
+/* COMPONENTES EN FLEXBOX*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+    align-items: center;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+.logo {
+    padding: 0 40px;
+}
+.logo img{
+    height: 80px;
+}
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    width: max-content;
+}
+/* ANIMACION SOBRE BOTONES DEL MENU */
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+.nav-menu-link:hover{
+    background-color: gray;
+    transition: 0.5s;
+}
+
+.main {
+    grid-area: main;
+}
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/cerveza.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero p{
+    letter-spacing: 3.2px;
+    text-align: center;
+    font-weight: normal;
+    font-family: "Lobster", sans-serif;
+    color: white;
+    font-size: 1.25em;
+    padding: 0 0 24px;
+}
+.footer{
+    grid-area: footer;
+    color: #fff;
+    background-color: #111;
+}
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+}
+.footer-content h3 {
+    font-size: 1.8;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 0 1rem 0;
+}
+.socials li {
+    margin: 0 10px;
+}
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i {
+    font-size: 1.1rem;
+}
+.footer p{
+    font-size: 12px;
+}
+.footer-bottom {
+    background-color: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 60px;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        padding: 0 60px;
+    }
+
+    .logo img{
+        height: 60px;
+    }
+    
+    .checkbtn{
+        display: block;
+    }
+    .menu-icon{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        color: white;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: black;
+        position: fixed;
+        left:-100%;
+        top: 60px;
+        width: 100%;
+        padding: 20px;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-link:hover{
+        background: none;
+        color: #ECD4CF;
+        transition: 0.5s;
+    }
+    #check:checked ~ ul {
+        left:0;
+    }
+
+}
