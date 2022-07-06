@@ -1,90 +1,74 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cervezería Huefra</title>
-	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
-	<script src="../../bootstrap/js/jquery.slim.min.js"></script>
-	<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cervecería Huefra</title>
 	<link rel="icon" href="../img/favicon.ico">
-	<link rel="stylesheet" href="../css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lobster&display=swap');
-	</style>
-	<script src="https://kit.fontawesome.com/af5bbb8c44.js" crossorigin="anonymous"></script>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body class="grid-container">
 	<header class="header">
-		<nav class="nav">
-		<a href="../../index.html" class="logo nav-link">
-			<img src="../img/logo.jpg" alt="logo">
-		</a>
-		<input type="checkbox" id="check">
-        <label for="check" class="checkbtn"><i class="fa-solid fa-bars menu-icon"></i></label>
-			<ul class="nav-menu">
-				<li class="nav-menu-item"><a href="../../index.html" class="nav-menu-link nav-link">Inicio</a></li>
-				<li class="nav-menu-item"><a href="productos.html" class="nav-menu-link nav-link">Productos</a></li>
-				<li class="nav-menu-item"><a href="fabrica.html" class="nav-menu-link nav-link">La fábrica</a></li>
-				<li class="nav-menu-item"><a href="nosotros.html" class="nav-menu-link nav-link">Nosotros</a></li>
-				<li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link nav-link">Contacto</a></li>
-			</ul>
+		<nav>
+			<a href="../../index.html" class="logo nav-link"><img class="logo" src="./../img/logov2.jpg" alt="logo"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="../../index.html">Inicio</a></li>
+					<li><a href="../pages/productos.html">Productos</a></li>
+					<li><a href="../pages/fabrica.html">La fábrica</a></li>
+					<li><a href="../pages/nosotros.html">Nosotros</a></li>
+					<li><a href="../pages/contacto.html">Contacto</a></li>
+				</ul>
+			</div>
+			<i class="fa-solid fa-bars" onclick="showMenu()"></i>
 		</nav>
 	</header>
 	<!-- formulario de contacto -->
-	<section id="hero">
-		<div class="container">
-			<div class="flex-column text-light">
-				<form>
-					<div class="form-group">
-					  <label for="formGroupExampleInput">Example label</label>
-					  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-					</div>
-					<div class="form-group">
-					  <label for="formGroupExampleInput2">Another label</label>
-					  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-					</div>
-				  </form>
-				  <form class="form-inline">
-					<label class="sr-only" for="inlineFormInputName2">Name</label>
-					<input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
-				  
-					<label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-					<div class="input-group mb-2 mr-sm-2">
-					  <div class="input-group-prepend">
-						<div class="input-group-text">@</div>
-					  </div>
-					  <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-					</div>
-				  
-					<div class="form-check mb-2 mr-sm-2">
-					  <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-					  <label class="form-check-label" for="inlineFormCheck">
-						Remember me
-					  </label>
-					</div>
-				  
-					<button type="submit" class="btn btn-primary mb-2">Submit</button>
-				  </form>
-				  
+	<div class="main">
+	</div>
+	<div class="footer">
+		<footer class="footer">
+			<div class="footer-content">
+				<h3>Cervecería Huefra</h3>
+				<ul class="socials">
+					<li><a href="https://www.facebook.com/Huefra-Puerto-Madryn-574169756281543/" target="_blank"><i
+								class="fa-brands fa-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/huefrapm/" target="_blank"><i
+								class="fa-brands fa-instagram"></i></a>
+					</li>
+					<li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+				</ul>
+				<div class="footer-bottom">
+					<p>Copyright © Cervecería Huefra 2022. Designed by zer0day</p>
+				</div>
 			</div>
-		</div>
-	</section>	
-	<footer class="footer">
-		<div class="footer-content">
-			<h3>Cervecería Huefra</h3>
-			<ul class="socials">
-				<li><a href="https://www.facebook.com/Huefra-Puerto-Madryn-574169756281543/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="https://www.instagram.com/huefrapm/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-				<li><a href=""><i class="fa fa-whatsapp"></i></a></li>
-			</ul>
-		</div>
-		<div class="footer-bottom">
-			<p>Copyright © Cervecería Huefra 2022. Designed by zer0day</p>
-		</div>
-	</footer>
+		</footer>
+	</div>
+	</section>
+	<!-- JavaScript for Toggle Menu -->
+	<script>
+		var navLinks = document.getElementById("navLinks");
+
+		function showMenu() {
+			navLinks.style.right = "0";
+		}
+
+		function hideMenu() {
+			navLinks.style.right = "-200px";
+		}
+	</script>
 </body>
 
 </html>
